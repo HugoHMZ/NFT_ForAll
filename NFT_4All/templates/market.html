@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div id="card_container">
+        {% for item in all_items %}
+        <div class="card">
+            <img src="{% static 'item/no_img.png' %}">
+            <h2> {{ item.name }}</h2>
+            <h2>{{ item.price }}</h2>
+            {% if '/index/' in request.path %}
+                <a class="buy" href="{% url 'nft_add' item.id_item %}">BUY</a>
+            {% endif %}
+            {% if '/profile/' in request.path %}
+                <a class="sell" href="{% url 'nft_sell' item.id_item %}">SELL</a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

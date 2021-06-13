@@ -1,0 +1,38 @@
+html {
+    width: 100%;
+    height: 1000px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #e8eaed;
+}
+
+#nav_bar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+#nav_bar ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#nav_bar ul li {
+    margin-left: 20px;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+#content {
+    height: 100%;
+    width: 100%;
+}

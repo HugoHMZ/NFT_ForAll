@@ -15,8 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from item.views import index, profile, add, sell
 
 urlpatterns = [
+    path('index/', index, name="nft_list"),
+    path('add/<int:pk>', add, name="nft_add"),
+    path('sell/<int:pk>', sell, name="nft_sell"),
+    path('profile/', profile, name="nft_profile"),
     path('item/', include('item.urls')),
     path('admin/', admin.site.urls),
 ]
+
